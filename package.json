@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node-sass sass/style.sass -o css/",
+    "watch": "npm run build && node-sass --watch sass -o css"
   },
   "keywords": [],
   "author": "",

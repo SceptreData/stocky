@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.benefit svg {
+  width: 100px; }
+
+.site-nav a, .site-nav a:visited {
+  color: #282828; }
+
+.site-header {
+  min-height: 80vh;
+  background: url(../img/nature-bg-sm.jpg) no-repeat center center;
+  background-size: cover; }
+  @media (min-width: 768px) {
+    .site-header {
+      background: url(../img/nature-bg-md.jpg) no-repeat center center;
+      background-size: cover; } }
+  @media (min-width: 992px) {
+    .site-header {
+      background: url(../img/nature-bg.jpg) no-repeat center center;
+      background-size: cover; } }
+
+.site-nav {
+  display: flex;
+  justify-content: space-between; }
+
+.site-nav button {
+  padding: 0;
+  background: none;
+  border: none; }
+
+.site-nav svg {
+  width: 30px; }
+
+.fit-content {
+  max-width: 960px; }
+  @media (min-width: 1200px) {
+    .fit-content {
+      max-width: 1170px; } }
