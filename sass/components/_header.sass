@@ -1,7 +1,9 @@
 .site-header
     color: white
-    min-height: 80vh
-    margin-bottom: 8rem
+    min-height: 45vh
+    margin-bottom: 6rem
+    display: flex
+    flex-direction: column
 
     // background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,255,255, .5) 30%);
     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 0.2) 60%), url(../img/nature-bg-sm.jpg) no-repeat center center
@@ -10,19 +12,80 @@
     @media (min-width: $screen-md)
         background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 0.2) 60%), url(../img/nature-bg-md.jpg) no-repeat center center
         background-size: cover
+        min-height: 65vh
 
     @media (min-width: $screen-lg)
         background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 0.2) 60%), url(../img/nature-bg.jpg) no-repeat center center
         background-size: cover
+        min-height: 80vh
 
 .site-nav
+    position: sticky
+    top: 0
+    width: 100%
+    padding: 0.5rem 1rem
     display: flex
     justify-content: space-between
     align-items: center
-    margin-bottom: 4rem
+    margin-bottom: 2rem !important
+    background: rgba(35, 57, 71, 0.95)
+
+    img
+        filter: invert(100%)
+
+    svg
+        color: white
 
     ul
         display: none
+
+    @media only screen and (min-width: $screen-md)
+        margin-bottom: 6rem !important
+        background: none
+        border: none
+        position: static
+
+        a, a:visited
+            color: #435662
+
+            &:hover
+                color: lightgrey
+
+        img
+            filter: invert(0)
+
+        svg
+            color: #435662
+
+    @media only screen and (min-width: $screen-lg)
+        padding: 0.5rem 0
+        margin-bottom: 15rem !important
+
+.action-links
+    margin-left: auto
+    margin-right: 2rem
+
+    a, a:visited
+        margin-right: 0.75rem
+        min-width: 70px
+        padding: 0.5rem 0.75rem
+        border-radius: 8px
+        transition: all 0.15s ease-in-out
+
+        &:last-of-type
+            margin-right: 0
+
+        &:hover
+            transition: all 0.15s ease-in-out
+            color: white
+            background: grey
+
+        @media only screen and (min-width: $screen-md)
+            background: none
+
+            &:hover
+                color: darkgrey
+                background: none
 
 .site-nav button
     padding: 0
@@ -39,10 +102,11 @@
     align-items: center
     text-align: center
     padding: 0.25rem
+    margin-top: 80px !important
 
     h2
         font-size: 2.5rem
-        margin-bottom: 1.5rem
+        margin-bottom: 2.25rem
 
     aside
         font-size: 0.7rem

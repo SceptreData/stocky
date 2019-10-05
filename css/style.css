@@ -66,7 +66,7 @@ a, a:visited {
   text-decoration: none; }
 
 .site-nav a, .site-nav a:visited {
-  color: #282828; }
+  color: white; }
 
 .call-to-action, .call-to-action:visited {
   padding: 1.25rem 3rem;
@@ -81,26 +81,79 @@ a, a:visited {
 
 .site-header {
   color: white;
-  min-height: 80vh;
-  margin-bottom: 8rem;
+  min-height: 45vh;
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(0deg, #020024 0%, rgba(255, 255, 255, 0.2) 60%), url(../img/nature-bg-sm.jpg) no-repeat center center;
   background-size: cover; }
   @media (min-width: 768px) {
     .site-header {
       background: linear-gradient(0deg, #020024 0%, rgba(255, 255, 255, 0.2) 60%), url(../img/nature-bg-md.jpg) no-repeat center center;
-      background-size: cover; } }
-  @media (min-width: 992px) {
+      background-size: cover;
+      min-height: 65vh; } }
+  @media (min-width: 1024px) {
     .site-header {
       background: linear-gradient(0deg, #020024 0%, rgba(255, 255, 255, 0.2) 60%), url(../img/nature-bg.jpg) no-repeat center center;
-      background-size: cover; } }
+      background-size: cover;
+      min-height: 80vh; } }
 
 .site-nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4rem; }
+  margin-bottom: 2rem !important;
+  background: rgba(35, 57, 71, 0.95); }
+  .site-nav img {
+    filter: invert(100%); }
+  .site-nav svg {
+    color: white; }
   .site-nav ul {
     display: none; }
+  @media only screen and (min-width: 768px) {
+    .site-nav {
+      margin-bottom: 6rem !important;
+      background: none;
+      border: none;
+      position: static; }
+      .site-nav a, .site-nav a:visited {
+        color: #435662; }
+        .site-nav a:hover, .site-nav a:visited:hover {
+          color: lightgrey; }
+      .site-nav img {
+        filter: invert(0); }
+      .site-nav svg {
+        color: #435662; } }
+  @media only screen and (min-width: 1024px) {
+    .site-nav {
+      padding: 0.5rem 0;
+      margin-bottom: 15rem !important; } }
+
+.action-links {
+  margin-left: auto;
+  margin-right: 2rem; }
+  .action-links a, .action-links a:visited {
+    margin-right: 0.75rem;
+    min-width: 70px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    transition: all 0.15s ease-in-out; }
+    .action-links a:last-of-type, .action-links a:visited:last-of-type {
+      margin-right: 0; }
+    .action-links a:hover, .action-links a:visited:hover {
+      transition: all 0.15s ease-in-out;
+      color: white;
+      background: grey; }
+    @media only screen and (min-width: 768px) {
+      .action-links a, .action-links a:visited {
+        background: none; }
+        .action-links a:hover, .action-links a:visited:hover {
+          color: darkgrey;
+          background: none; } }
 
 .site-nav button {
   padding: 0;
@@ -116,10 +169,11 @@ a, a:visited {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0.25rem; }
+  padding: 0.25rem;
+  margin-top: 80px !important; }
   .hero h2 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem; }
+    margin-bottom: 2.25rem; }
   .hero aside {
     font-size: 0.7rem;
     text-transform: uppercase; }
@@ -128,15 +182,30 @@ a, a:visited {
   text-decoration: underline; }
 
 .the-benefits {
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 6rem !important; }
 
 .benefit {
   text-align: center;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  width: 100%; }
   .benefit svg {
     width: 100px; }
   .benefit h3 {
     margin-bottom: 0.5rem; }
+  .benefit p {
+    max-width: 50ch;
+    margin: 0 auto;
+    padding: 0 0.5rem; }
+  @media only screen and (min-width: 768px) {
+    .benefit {
+      width: 50%; } }
+  @media only screen and (min-width: 1024px) {
+    .benefit {
+      width: 33%; } }
 
 .benefit-separator {
   border-bottom: 1px solid #b98717;
@@ -146,10 +215,11 @@ a, a:visited {
 
 .the-quote {
   color: rgba(255, 255, 255, 0.8);
-  min-height: 30vh;
+  min-height: 450px;
   background: linear-gradient(rgba(67, 86, 98, 0.95), rgba(67, 86, 98, 0.95)), url(../img/laptop-bg.jpg) center center;
   text-align: center;
-  padding: 4.5rem 0.5rem; }
+  padding: 4.5rem 0.5rem;
+  margin-bottom: 6.5rem; }
   .the-quote img {
     border-radius: 50%;
     border: 5px solid #919ba2; }
@@ -158,15 +228,161 @@ a, a:visited {
     font-weight: 400;
     font-style: italic; }
   .the-quote p {
+    max-width: 1060px;
+    margin: 0 auto;
     font-size: 1.5rem; }
   .the-quote cite {
     font-size: 0.8rem; }
 
+.tile-heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem; }
+
 .tile-separator {
-  border-bottom: 2px solid #b98717; }
+  border-bottom: 2px solid #b98717;
+  width: 6.25rem;
+  margin: 0 auto;
+  margin-bottom: 2.5rem; }
+
+.tile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 3.5rem auto; }
+  .tile-grid a, .tile-grid a:visited {
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.15s ease-in-out; }
+    .tile-grid a span, .tile-grid a:visited span {
+      color: white;
+      transition: all 0.15s ease-in-out; }
+    .tile-grid a:hover, .tile-grid a:visited:hover {
+      color: #f5ca6d; }
+      .tile-grid a:hover span, .tile-grid a:visited:hover span {
+        color: #f5ca6d; }
+
+.tile-card {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: italic;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 50%;
+  padding: 4.5rem 0; }
+  .tile-card span {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.125rem; }
+  @media only screen and (min-width: 576px) {
+    .tile-card span {
+      font-size: 2.5rem; } }
+  @media only screen and (min-width: 768px) {
+    .tile-card {
+      width: 33%; }
+      .tile-card:last-of-type {
+        background-image: url(../img/wide-forest.jpg);
+        flex-grow: 1; } }
+  @media only screen and (min-width: 1400px) {
+    .tile-card {
+      width: 20%; }
+      .tile-card:last-of-type {
+        background-image: url(../img/nature.jpg); } }
+
+.landscapes {
+  background-image: url(../img/landscapes.jpg); }
+
+.things {
+  background-image: url(../img/things.jpg); }
+
+.fashion {
+  background-image: url(../img/fashion.jpg); }
+
+.people {
+  background-image: url(../img/people.jpg); }
+
+.design {
+  background-image: url(../img/design.jpg); }
+
+.technology {
+  background-image: url(../img/technology.jpg); }
+
+.cooking {
+  background-image: url(../img/cooking.jpg); }
+
+.cityscapes {
+  background-image: url(../img/cityscapes.jpg); }
+
+.animals {
+  background-image: url(../img/animals.jpg); }
+
+.nature {
+  background-image: url(../img/nature.jpg); }
+
+.statistics {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 3.75rem !important; }
+
+.stat {
+  margin-bottom: 2rem;
+  width: 50%;
+  text-align: center; }
+  @media only screen and (min-width: 576px) {
+    .stat {
+      width: 33%; } }
+  @media only screen and (min-width: 768px) {
+    .stat {
+      width: 20%;
+      margin-bottom: 0;
+      text-align: left; } }
+
+.stat > span {
+  font-size: 1.75rem;
+  font-weight: 700; }
+
+.stat > p {
+  font-size: 1rem;
+  font-weight: 300; }
+
+.site-footer {
+  border-top: 1px solid #e2e2e2;
+  background: #f7f7f7;
+  padding: 2.5rem 0;
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: #aaaaaad0; }
+
+.site-footer > div {
+  display: block;
+  justify-content: space-between;
+  text-align: center; }
+  @media only screen and (min-width: 576px) {
+    .site-footer > div {
+      display: flex;
+      text-align: left; } }
+
+.site-footer aside {
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  line-height: 2rem; }
+  .site-footer aside > span {
+    color: #333;
+    font-weight: 400; }
+  @media only screen and (min-width: 576px) {
+    .site-footer aside {
+      line-height: 1.4; } }
+
+body {
+  min-width: 320px; }
 
 .fit-content {
-  max-width: 960px; }
+  max-width: 960px;
+  margin: 0 auto; }
   @media (min-width: 1200px) {
     .fit-content {
       max-width: 1170px; } }

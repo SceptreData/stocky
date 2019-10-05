@@ -24,8 +24,10 @@
         <li><a href="#">Contact Us</a></li>
         <li><a href="#">Privacy Policy</a></li>
       </ul>
-      <a href="#">Log in</a>
-      <a href="#">Sign Up</a>
+      <div class="action-links">
+        <a href="#">Log in</a>
+        <a href="#">Sign Up</a>
+      </div>
       <button class="menu-btn" title="Menu Button"><svg aria-hidden="true" focusable="false" data-prefix="fas"
           data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512">
@@ -41,7 +43,7 @@
     </div>
   </header>
 
-  <div class="the-benefits">
+  <div class="the-benefits fit-content">
     <section class="benefit">
       <svg viewBox="0 0 781 796" version="1.1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -155,73 +157,83 @@
   </div>
 
   <div class="image-tiles">
-    <h4>Browse by Keyword</h4>
+    <h4 class="tile-heading">Browse by Keyword</h4>
     <div class="tile-separator"></div>
     <div class="tile-grid">
 
-      <div class="tile-card">
-        <img src="img/landscapes.jpg" alt="Beautiful Landscapes">
-        327 Photos <br />
-        <span>Landscapes</span>
-      </div>
+        <div class="tile-card landscapes">
+          <a href="#">
+            327 Photos <br />
+            <span>Landscapes</span>
+          </a>
+        </div>
 
-      <div class="tile-card">
-        <img src="img/things.jpg" alt="Things - An accurate descriptor">
-        856 Photos<br />
-        <span>Things</span>
-      </div>
+        <div class="tile-card things">
+          <a href="#">
+            856 Photos<br />
+            <span>Things</span>
+          </a>
+        </div>
 
-      <div class="tile-card">
-        <img src="img/fashion.jpg" alt="Fashion - For you!">
-        27 Photos <br />
-        <span>Fashion</span>
-      </div>
+        <div class="tile-card fashion">
+          <a href="#">
+            27 Photos <br />
+            <span>Fashion</span>
+          </a>
+        </div>
+  
 
-      <div class="tile-card">
-        <img src="img/people.jpg" alt="A beautiful shot of feet.">
-        174 Photos <br />
-        <span>People</span>
-      </div>
+        <div class="tile-card people">
+          <a href="#">
+            174 Photos <br />
+            <span>People</span>
+          </a>
+        </div>
 
-      <div class="tile-card">
-        <img src="img/design.jpg" alt="Design - It's what we do.">
-        731 Photos <br />
-        <span>Design</span>
-      </div>
+        <div class="tile-card design">
+          <a href="#">
+            731 Photos <br />
+            <span>Design</span>
+          </a>
+        </div>
 
-      <div class="tile-card">
-        <img src="img/technology.jpg" alt="Technology - Not just for nerds anymore.">
-        237 Photos <br />
-        <span>Technology</span>
-      </div>
+        <div class="tile-card technology">
+          <a href="#">
+            237 Photos <br />
+            <span>Technology</span>
+          </a>
+        </div>
 
-      <div class="tile-card">
-        <img src="img/cooking.jpg" alt="Cooking - a hungry man's game.">
-        529 Photos <br />
-        <span>Cooking</span>
-      </div>
+        <div class="tile-card cooking">
+          <a href="#">
+            529 Photos <br />
+            <span>Cooking</span>
+          </a>
+        </div>
 
-      <div class="tile-card">
-        <img src="img/cityscapes.jpg" alt="Cityscapes - The same genre as Escape from New York">
-        145 Photos <br />
-        <span>Cityscapes</span>
-      </div>
+        <div class="tile-card cityscapes">
+          <a href="#">
+            145 Photos <br />
+            <span>Cityscapes</span>
+          </a>
+        </div>
+        <div class="tile-card animals">
+          <a href="#">
+            327 Photos <br />
+            <span>Animals</span>
+          </a>
+        </div>
 
-      <div class="tile-card">
-        <img src="img/animals.jpg" alt="Animals - We love em!">
-        327 Photos <br />
-        <span>Animals</span>
-      </div>
-
-      <div class="tile-card">
-        <img src="img/nature.jpg" alt="Nature - Better than Nurture.">
-        1,437 Photos <br />
-        <span>Nature</span>
-      </div>
+        <div class="tile-card nature">
+          <a href="#">
+            1,437 Photos <br />
+            <span>Nature</span>
+          </a>
+        </div>
     </div>
   </div>
 
-  <div class="statistics">
+  <div class="fit-content statistics">
 
     <div class="stat">
       <span>23,567</span>
@@ -246,11 +258,13 @@
     </div>
   </div>
 
-  <footer>
-    <p class="legalese">
-      © 2019 STOCKY. All Rights Reserved
-    </p>
-    <aside>DESIGN BY: <span>www.bekades.com</span></aside>
+  <footer class="site-footer">
+    <div class="fit-content">
+      <p class="legalese">
+        © 2019 STOCKY. All Rights Reserved
+      </p>
+      <aside>design by: <span>www.bekades.com</span></aside>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>

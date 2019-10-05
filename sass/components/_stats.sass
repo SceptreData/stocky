@@ -1,0 +1,26 @@
+.statistics
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    margin-bottom: 3.75rem !important
+
+.stat
+    margin-bottom: 2rem
+    width: 50%
+    text-align: center
+
+    @media only screen and (min-width: $screen-sm)
+        width: 33%
+
+    @media only screen and (min-width: $screen-md)
+        width: 20%
+        margin-bottom: 0
+        text-align: left
+
+.stat > span
+    font-size: 1.75rem
+    font-weight: 700
+
+.stat > p
+    font-size: 1rem
+    font-weight: 300
