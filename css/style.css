@@ -18,28 +18,89 @@ img {
   max-width: 100%;
   height: auto; }
 
-.benefit svg {
-  width: 100px; }
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Lato-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Lato-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Lato-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/PlayfairDisplay-BoldItalic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/PlayfairDisplay-Italic.ttf") format("truetype"); }
+
+html {
+  font-family: "Lato", sans-serif;
+  font-weight: 300; }
+
+h1, h2, h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700; }
+
+.fancy-txt {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.7rem; }
+
+a, a:visited {
+  text-decoration: none; }
 
 .site-nav a, .site-nav a:visited {
   color: #282828; }
 
+.call-to-action, .call-to-action:visited {
+  padding: 1.25rem 3rem;
+  border: 3px solid white;
+  text-transform: uppercase;
+  color: white;
+  transition: all 0.2s ease-in;
+  margin-bottom: 1rem; }
+  .call-to-action:hover, .call-to-action:visited:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: black; }
+
 .site-header {
+  color: white;
   min-height: 80vh;
-  background: url(../img/nature-bg-sm.jpg) no-repeat center center;
+  margin-bottom: 8rem;
+  background: linear-gradient(0deg, #020024 0%, rgba(255, 255, 255, 0.2) 60%), url(../img/nature-bg-sm.jpg) no-repeat center center;
   background-size: cover; }
   @media (min-width: 768px) {
     .site-header {
-      background: url(../img/nature-bg-md.jpg) no-repeat center center;
+      background: linear-gradient(0deg, #020024 0%, rgba(255, 255, 255, 0.2) 60%), url(../img/nature-bg-md.jpg) no-repeat center center;
       background-size: cover; } }
   @media (min-width: 992px) {
     .site-header {
-      background: url(../img/nature-bg.jpg) no-repeat center center;
+      background: linear-gradient(0deg, #020024 0%, rgba(255, 255, 255, 0.2) 60%), url(../img/nature-bg.jpg) no-repeat center center;
       background-size: cover; } }
 
 .site-nav {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem; }
+  .site-nav ul {
+    display: none; }
 
 .site-nav button {
   padding: 0;
@@ -48,6 +109,61 @@ img {
 
 .site-nav svg {
   width: 30px; }
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.25rem; }
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem; }
+  .hero aside {
+    font-size: 0.7rem;
+    text-transform: uppercase; }
+
+.hero-fine-print {
+  text-decoration: underline; }
+
+.the-benefits {
+  padding: 0 1rem; }
+
+.benefit {
+  text-align: center;
+  margin-bottom: 3rem; }
+  .benefit svg {
+    width: 100px; }
+  .benefit h3 {
+    margin-bottom: 0.5rem; }
+
+.benefit-separator {
+  border-bottom: 1px solid #b98717;
+  width: 5.5rem;
+  margin: 0 auto;
+  margin-bottom: 1rem; }
+
+.the-quote {
+  color: rgba(255, 255, 255, 0.8);
+  min-height: 30vh;
+  background: linear-gradient(rgba(67, 86, 98, 0.95), rgba(67, 86, 98, 0.95)), url(../img/laptop-bg.jpg) center center;
+  text-align: center;
+  padding: 4.5rem 0.5rem; }
+  .the-quote img {
+    border-radius: 50%;
+    border: 5px solid #919ba2; }
+  .the-quote blockquote {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-style: italic; }
+  .the-quote p {
+    font-size: 1.5rem; }
+  .the-quote cite {
+    font-size: 0.8rem; }
+
+.tile-separator {
+  border-bottom: 2px solid #b98717; }
 
 .fit-content {
   max-width: 960px; }

@@ -1,19 +1,28 @@
 .site-header
+    color: white
     min-height: 80vh
-    background: url(../img/nature-bg-sm.jpg) no-repeat center center
+    margin-bottom: 8rem
+
+    // background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,255,255, .5) 30%);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 0.2) 60%), url(../img/nature-bg-sm.jpg) no-repeat center center
     background-size: cover
 
     @media (min-width: $screen-md)
-        background: url(../img/nature-bg-md.jpg) no-repeat center center
+        background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 0.2) 60%), url(../img/nature-bg-md.jpg) no-repeat center center
         background-size: cover
 
     @media (min-width: $screen-lg)
-        background: url(../img/nature-bg.jpg) no-repeat center center
+        background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 0.2) 60%), url(../img/nature-bg.jpg) no-repeat center center
         background-size: cover
 
 .site-nav
     display: flex
     justify-content: space-between
+    align-items: center
+    margin-bottom: 4rem
+
+    ul
+        display: none
 
 .site-nav button
     padding: 0
@@ -23,4 +32,21 @@
 .site-nav svg
     width: 30px
 
-.call-to-action
+.hero
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    padding: 0.25rem
+
+    h2
+        font-size: 2.5rem
+        margin-bottom: 1.5rem
+
+    aside
+        font-size: 0.7rem
+        text-transform: uppercase
+
+.hero-fine-print
+    text-decoration: underline
