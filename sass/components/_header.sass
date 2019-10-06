@@ -1,6 +1,6 @@
 .site-header
     color: white
-    min-height: 45vh
+    min-height: 60vh
     margin-bottom: 6rem
     display: flex
     flex-direction: column
@@ -20,7 +20,7 @@
         min-height: 80vh
 
 .site-nav
-    position: sticky
+    position: fixed
     top: 0
     width: 100%
     padding: 0.5rem 1rem
@@ -30,14 +30,101 @@
     margin-bottom: 2rem !important
     background: rgba(35, 57, 71, 0.95)
 
-    img
+    .logo
         filter: invert(100%)
+
+    .nav-logo
+        display: none
+
+    .nav-logo.is-active
+        opacity: 0.5
+        filter: invert(50%)
+
+        @media (min-width: $screen-sm)
+            transition: opacity 2s ease-in
+            display: block
+            padding: 0 15rem 0rem 15rem
 
     svg
         color: white
+        padding: 0.5rem 0.75rem
+        border-radius: 8px
+        transition: background 0.15s ease-in
 
-    ul
-        display: none
+        &:hover
+            color: white
+            background: grey
+
+    .nav-menu
+        padding-top: 0
+
+        // align-items: center
+        width: 60%
+        background: rgba(35, 57, 71, 0.95)
+        font-size: 1.5rem
+        text-align: right
+        position: absolute
+        top: 80px
+        right: 0
+        height: 100vh
+        transition: margin-right 0.3s ease-in-out
+        margin-right: -100%
+
+        @media only screen and (min-width: $screen-md)
+            transition: margin-top 0.4s ease-out
+            display: flex
+            background: rgba(35, 57, 71, 1)
+            flex-direction: column
+            align-items: center
+            margin-right: 0
+            width: 100%
+            height: 40%
+            top: 0
+            margin-top: calc(-100vh + 2rem)
+
+            ul
+                max-width: 600px
+                max-height: 80px
+                display: flex
+                flex-wrap: wrap
+                margin: 0 auto
+                justify-content: space-around
+                align-items: center
+                text-align: center
+                padding-top: 2rem
+                border-top: 1px solid rgba(255, 255, 255, 0.4)
+
+            li
+                width: 25%
+                padding: 1rem 1rem
+                font-size: 1.125rem
+
+            a, a:visited
+                color: white
+
+    .nav-menu.is-active
+        margin-right: 0
+
+        @media only screen and (min-width: $screen-md)
+            margin-top: 0
+            padding-top: 2rem
+
+    #close-btn
+        position: relative
+        top: -80px
+        left: 280px
+        width: 60px
+        fill: rgba(255, 255, 255, 0.6)
+
+        &:hover
+            background: none
+            fill: white
+
+    li
+        padding: 0.75rem 1.5rem
+
+        a:hover
+            color: #b98717
 
     @media only screen and (min-width: $screen-md)
         margin-bottom: 6rem !important
@@ -51,7 +138,7 @@
             &:hover
                 color: lightgrey
 
-        img
+        .logo
             filter: invert(0)
 
         svg
@@ -63,7 +150,8 @@
 
 .action-links
     margin-left: auto
-    margin-right: 2rem
+
+    // margin-right: 1.5rem
 
     a, a:visited
         margin-right: 0.75rem
@@ -93,7 +181,7 @@
     border: none
 
 .site-nav svg
-    width: 30px
+    width: 50px
 
 .hero
     display: flex
@@ -102,7 +190,8 @@
     align-items: center
     text-align: center
     padding: 0.25rem
-    margin-top: 80px !important
+    margin-top: 10rem !important
+    text-shadow: 1px 2px 2px black
 
     h2
         font-size: 2.5rem
@@ -111,6 +200,12 @@
     aside
         font-size: 0.7rem
         text-transform: uppercase
+
+    @media only screen and (min-width: $screen-md)
+        margin-top: 80px !important
+
+.call-to-action
+    text-shadow: none
 
 .hero-fine-print
     text-decoration: underline
