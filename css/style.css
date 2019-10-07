@@ -135,7 +135,7 @@ a, a:visited {
     font-size: 1.5rem;
     text-align: right;
     position: absolute;
-    top: 80px;
+    top: 79px;
     right: 0;
     height: 100vh;
     transition: margin-right 0.3s ease-in-out;

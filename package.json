@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node-sass sass/style.sass -o css/",
-    "watch": "npm run build && node-sass --watch sass -o css"
+    "build": "npx node-sass sass/style.sass -o css/",
+    "watch": "npm run build && npx node-sass --watch sass -o css"
   },
   "keywords": [],
   "author": "",
